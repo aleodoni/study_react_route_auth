@@ -103,8 +103,6 @@ export const AuthProvider: React.FC = ({ children }) => {
         localStorage.setItem('@token', JSON.stringify(token));
         apiEscola.defaults.headers.Authorization = `Bearer ${token}`;
 
-        console.log(apiEscola.defaults);
-
         dispatch({
           type: 'SUCCESS',
           payload: {
